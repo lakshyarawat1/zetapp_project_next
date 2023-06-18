@@ -2,6 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import { BsLinkedin, BsInstagram, BsTelegram } from "react-icons/bs";
+import { GrFacebook } from 'react-icons/gr'
+import {FaWhatsapp} from 'react-icons/fa'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -122,6 +125,18 @@ export default function RootLayout({
                     />
                   </svg>
                   Partner With Us
+                </div>
+              </div>
+              <div>
+                <div>
+                  SOCIAL
+                  <div className="flex gap-4 cursor-pointer mt-5 text-2xl">
+                    <BsLinkedin />
+                    <BsInstagram />
+                    <GrFacebook />
+                    <BsTelegram />
+                    <FaWhatsapp />
+                  </div>
                 </div>
               </div>
             </div>
