@@ -37,7 +37,7 @@ export default function RootLayout({
             />
           </svg>
         </div>
-        <div className="h-[13vh] mb-2 md:w-[55%] gap-20 md:gap-10 font-light w-full text-center pt-2 float-right flex flex-col md:flex-row">
+        <div className="h-[13vh] mb-2 md:w-[55%] gap-20 md:gap-10 font-light w-full text-center pt-2 float-right hidden md:flex md:flex-row">
           <Link
             href="/"
             className="my-auto text-lg text-slate-500 cursor-pointer"
@@ -141,12 +141,9 @@ export default function RootLayout({
               </div>
             </div>
           </div>
-          <Image
+          <img
             src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FAboutUs.085fb7a2.png&w=3840&q=100"
             alt="banner"
-            layout="responsive"
-            width={100}
-            height={10}
             className="absolute z-0"
           />
         </div>

@@ -9,46 +9,41 @@ const page = ({}) => {
     <div className="relative">
       {/* Hero Section */}
       <div className="">
-        <Image
+        <img
           src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FOurMission.13d85461.png&w=3840&q=100"
           alt="bannerImage"
-          layout="responsive"
-          width={100}
-          height={90}
+          className="h-screen w-full object-cover md:h-[90%]"
         />
-        <div className="absolute top-[7%] w-full mx-auto text-center text-white">
+        <div className="absolute md:top-[5%] top-[3%] w-full md:mx-auto text-center text-white">
           <div className="text-4xl font-semibold tracking-widest">
             OUR MISSION
-          </div>
-          <div className="py-2 px-80 ">
+          </div><br />
+          <div className="mx-auto w-1/2">
             Enabling financial inclusion for the next billion Indians & making
             their Zindagi Set. Building a platform that enables you to sell
             financial products & earn up to Rs. 1 lakh every month
           </div>
           <br />
-          <div className="font-bold tracking-[0.35rem]">
+          <div className="font-bold tracking-[0.35rem] mx-10">
             EARN BETTER. LIVE BETTER.
           </div>
         </div>
       </div>
       {/* Growth Section */}
       <div className="my-14">
-        <div className="w-full text-center text-4xl font-bold">
+        <div className="w-full text-center text-xl md:text-4xl font-bold">
           How we evolved over the years
         </div>
-        <Image
+        <img
           src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FGrowth.abe5b7d8.png&w=3840&q=100"
           alt="growth"
-          layout="responsive"
-          width={100}
-          height={10}
           className="py-14 px-20 overflow-y-scroll"
         />
       </div>
       {/* Featured Section */}
-      <div className="pt-14 pb-1 px-40 bg-slate-50">
-        <div className="text-4xl text-slate-700 font-bold">Got Featured</div>
-        <div className="my-10 flex gap-2">
+      <div className="md:p-24 p-10 bg-slate-50">
+        <div className="md:text-4xl text-slate-700 font-bold">Got Featured</div>
+        <div className="my-10 flex gap-2 overflow-scroll md:overflow-auto">
           <Image
             src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FEconomicTimes.5724030e.png&w=1080&q=75"
             width={180}
@@ -82,9 +77,9 @@ const page = ({}) => {
         </div>
       </div>
       {/* Investors section */}
-      <div className="py-14 px-40">
+      <div className="md:py-14 md:px-40 py-10 px-10">
         <div className="text-4xl font-bold">Meet the Investors</div>
-        <div className="my-20 flex gap-20">
+        <div className="my-20 flex gap-20 overflow-hidden">
           <Image
             src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FInvCompany1.41d5c5bd.png&w=1200&q=75"
             width={250}
@@ -116,9 +111,9 @@ const page = ({}) => {
             className="hover:scale-110"
           />
         </div>
-        <div className="flex flex-wrap mt-32 -ml-10">
+        <div className="flex flex-wrap mt-32 -ml-5 md:-ml-10">
           {investorsData.map((item, key) => (
-            <div key={key} className="basis-1/4 my-16 mx-10 hover:scale-105">
+            <div key={key} className="basis-1/4 md:my-16 md:mx-10 my-5 mx-8 hover:scale-105">
               <Image
                 src={item.url}
                 alt={item.name}
@@ -127,18 +122,18 @@ const page = ({}) => {
                 className=""
               />
               <div className="text-slate-800 mt-4">{item.name}</div>
-              <div className="text-slate-400">{item.description}</div>
+              <div className="text-slate-400 text-md">{item.description}</div>
             </div>
           ))}
         </div>
       </div>
       {/* Founders Section */}
-      <div className="py-14 px-40 bg-slate-50 w-full">
-        <div className="text-center text-4xl font-bold">Meet Our Founders</div>
-        <div className="text-center text-2xl text-slate-400 mt-4">
+      <div className="py-14 md:px-40 px-20 bg-slate-50 w-full">
+        <div className="text-center md:text-4xl text-xl font-bold">Meet Our Founders</div>
+        <div className="text-center md:text-2xl text-slate-400 mt-4">
           Few words from founders desk
         </div>
-        <div className="flex gap-24 mt-16 ml-6">
+        <div className="flex flex-col md:flex-row gap-24 mt-16 ml-6">
           <div>
             <Image
               src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FManish.519c8845.png&w=1080&q=75"
