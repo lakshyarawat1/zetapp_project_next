@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
+      <body className={`${inter.className} `}>
         <div className="flex md:hidden border-b">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -66,9 +66,9 @@ export default function RootLayout({
             Download ZET
           </div>
         </div>
-
+        <div style={{ clear : "both" }} />
         {children}
-        <div className="w-full h-[80%] bg-[#006fff] absolute">
+        <div className="w-full h-[80%] bg-[#006fff] relative">
           <div className="pt-14 px-40 absolute z-10">
             <Image
               src="https://zetapp.in/_next/static/media/zet_logo_white.04e35c15.svg"
@@ -147,7 +147,7 @@ export default function RootLayout({
             layout="responsive"
             width={100}
             height={10}
-            className="absolute bottom-0 z-0"
+            className="absolute z-0"
           />
         </div>
       </body>

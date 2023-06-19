@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { investorsData } from "@/constants/investorsData";
+import { BsLinkedin } from 'react-icons/bs'
 
 interface pageProps {}
 
@@ -14,7 +16,7 @@ const page = ({}) => {
           width={100}
           height={90}
         />
-        <div className="absolute top-[20%] w-full mx-auto text-center text-white">
+        <div className="absolute top-[7%] w-full mx-auto text-center text-white">
           <div className="text-4xl font-semibold tracking-widest">
             OUR MISSION
           </div>
@@ -114,7 +116,85 @@ const page = ({}) => {
             className="hover:scale-110"
           />
         </div>
-      </div>  
+        <div className="flex flex-wrap mt-32 -ml-10">
+          {investorsData.map((item, key) => (
+            <div key={key} className="basis-1/4 my-16 mx-10 hover:scale-105">
+              <Image
+                src={item.url}
+                alt={item.name}
+                width={230}
+                height={230}
+                className=""
+              />
+              <div className="text-slate-800 mt-4">{item.name}</div>
+              <div className="text-slate-400">{item.description}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+      {/* Founders Section */}
+      <div className="py-14 px-40 bg-slate-50 w-full">
+        <div className="text-center text-4xl font-bold">Meet Our Founders</div>
+        <div className="text-center text-2xl text-slate-400 mt-4">
+          Few words from founders desk
+        </div>
+        <div className="flex gap-24 mt-16 ml-6">
+          <div>
+            <Image
+              src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FManish.519c8845.png&w=1080&q=75"
+              alt="Manish Shara"
+              width={240}
+              height={240}
+            />
+            <div className="flex">
+              <div className="mt-3">
+                <div className="text-xl">Manish Shara</div>
+                <div className="text-lg">Co-Founder & CEO</div>
+              </div>
+              <BsLinkedin className="m-6 text-3xl" />
+            </div>
+          </div>
+          <div>
+            <Image
+              src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FYash.126e24ca.png&w=1080&q=75"
+              alt="Yash Desai"
+              width={240}
+              height={240}
+            />
+            <div className="flex">
+              <div className="mt-3">
+                <div className="text-xl">Yash Desai</div>
+                <div className="text-lg">Co-Founder</div>
+              </div>
+              <BsLinkedin className="m-6 text-3xl" />
+            </div>
+          </div>
+          <div>
+            <Image
+              src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FLokesh.ead063e7.png&w=1080&q=75"
+              alt="Lokesh Aggarwal"
+              width={240}
+              height={240}
+            />
+            <div className="flex">
+              <div className="mt-3">
+                <div className="text-xl">Lokesh Aggarwal</div>
+                <div className="text-lg">CTO</div>
+              </div>
+              <BsLinkedin className="m-6 text-3xl" />
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Banner Image */}
+      <div>
+        <Image src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FAboutUsFooter.d2311d39.png&w=3840&q=100"
+          alt="banner"
+          layout="responsive"
+          width={100}
+          height={100}
+        />
+      </div>
     </div>
   );
 };
