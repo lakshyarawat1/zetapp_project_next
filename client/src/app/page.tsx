@@ -25,10 +25,10 @@ export default function Home() {
           alt="hero Image"
           width={430}
           height={500}
-          className="absolute -top-10 right-0"
+          className="absolute -top-10 right-0 hidden md:flex"
         />
       </div>
-      <div className="py-24 px-40 text-center">
+      <div className="py-24 md:px-40 px-10 text-center">
         <div className="font-bold text-2xl">Top Brands on ZET</div>
         <div className="mt-5 text-slate-600 text-lg">
           We are trusted by best brand in the country

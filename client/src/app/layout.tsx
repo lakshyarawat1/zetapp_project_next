@@ -68,8 +68,8 @@ export default function RootLayout({
         </div>
         <div style={{ clear : "both" }} />
         {children}
-        <div className="w-full h-[80%] bg-[#006fff] relative">
-          <div className="pt-14 px-40 absolute z-10">
+        <div className="md:w-full h-[80%] bg-black md:bg-[#006fff] relative">
+          <div className="md:pt-14 md:px-40 absolute z-10">
             <Image
               src="https://zetapp.in/_next/static/media/zet_logo_white.04e35c15.svg"
               alt="logo"
@@ -78,7 +78,7 @@ export default function RootLayout({
             />
             <br />
             <hr />
-            <div className="flex text-white pt-10 gap-40">
+            <div className="flex text-white pt-10 md:gap-40">
               <div className="flex flex-col gap-3">
                 <div className="text-xl font-light tracking-wider">COMPANY</div>
                 <div>About Us</div>
@@ -144,7 +144,7 @@ export default function RootLayout({
           <img
             src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FAboutUs.085fb7a2.png&w=3840&q=100"
             alt="banner"
-            className="absolute z-0"
+            className="absolute z-0 hidden md:flex"
           />
         </div>
       </body>
